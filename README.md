@@ -48,7 +48,7 @@ Los modulos mas populares que no vienen dentro de python son:
 
 Para ver que modulos han sido instalados en nuestro ambiente virutal usaremos lo siguiente:
 
- pip3 freeze
+> pip3 freeze
 
 Para instalar modulos usaremos el siguiente comando:
 
@@ -82,14 +82,14 @@ CTRL + K  y CTRL + U
 
 Syntaxis
 
-> list_comprehension = [<expression> for <item> in  <iterable> if <condition == True> ]
+> list_comprehension = [*expression* for *item* in  *iterable* if *condition == True* ]
 
 
 **DICT COMPREHENSIONS**
 
 Syntaxis
 
-> dict_comprehesions = {<expressioon>: <expression_2> for <item> in <iterable> if <condition == True>}
+> dict_comprehesions = {*expressioon*: *expression_2* for *item* in *iterable* if *condition == True*}
 
 NOTA: Siempre que compartamos un repositorio de Python nunca debemos incluir la carpeta del ambiente
 virtual. En este caso lo omitiremos con .gitignore
@@ -99,7 +99,7 @@ virtual. En este caso lo omitiremos con .gitignore
 La funcion lambda es una funcion anonima que no necesita ser definida 
 Syntexis
 
-> lamda <argumentos>: <expresion>
+> lamda *argumentos*: *expresion*
 
 En Python las funciones lambda solo deben tener una linea de codigo, no varias.
 
@@ -111,7 +111,7 @@ Todas estas funciones retornan un objeto **iterable**
 
 Filter:
 
-> filter(<funcion lambda>, lista)
+> filter(*funcion lambda*, lista)
 
 Filtra valores de una lista, entonces la funcion lamda tiene que retornar un Bool por cada valor de la lista que cumpla
 expresion de lambda
@@ -119,11 +119,12 @@ expresion de lambda
 Por ejemplo, queremos obtener los numeros pares de una lista que contiene los numeros del 1 al 10:
 
 >my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-pairs = list(filter(lambda x: x%2 == 0, my_list)) 
+
+>pairs = list(filter(lambda x: x%2 == 0, my_list)) 
 
 Map:
 
-> map([funcion lambda], lista)
+> map(*funcion lambda*, lista)
 
 Mapea toda la lista y las itera en la funcion lamda y retorna el valor de la expression que esta en la funcion. Tiene que ser 
 cualquier operación.
@@ -131,20 +132,23 @@ cualquier operación.
 Por ejemplo, queremos el cuadrado de los valores de la lista que contiene del 1 al 10:
 
 >my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 >squeres = list(map(lambda x: x**2, my_list))
 
 Reduce
 
 > from functools import reduce
-> reduce(<funcion lambda>, list)
+
+> reduce(*funcion lambda*, list)
 
 Reduce la lista en un solo valor de la expresion de lambda.
 Por ejemplo, queremos el valor final de multiplicar los valores de una lista:
 
 >from functools import reduce
 >my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 >result = reduce(lambda a, b: a*b, my_list)
 
-**NOTA: Para concatener diccionarios usaremos el operador pipe |
+**NOTA: Para concatener diccionarios usaremos el operador pipe | **
 
 
