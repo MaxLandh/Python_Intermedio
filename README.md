@@ -93,3 +93,58 @@ Syntaxis
 
 NOTA: Siempre que compartamos un repositorio de Python nunca debemos incluir la carpeta del ambiente
 virtual. En este caso lo omitiremos con .gitignore
+ 
+**FUNCTION LAMBDA**
+
+La funcion lambda es una funcion anonima que no necesita ser definida 
+Syntexis
+
+> lamda <argumentos>: <expresion>
+
+En Python las funciones lambda solo deben tener una linea de codigo, no varias.
+
+**FUNCIONES DE ORDEN SUPERIOR**
+
+Es una funcion que recibe como parametro a otra funcion.
+Hay tres funciones de orden superior que son sumamente importantes: *filter*, *map* y *reduce*
+Todas estas funciones retornan un objeto **iterable**
+
+Filter:
+
+> filter(<funcion lambda>, lista)
+
+Filtra valores de una lista, entonces la funcion lamda tiene que retornar un Bool por cada valor de la lista que cumpla
+expresion de lambda
+
+Por ejemplo, queremos obtener los numeros pares de una lista que contiene los numeros del 1 al 10:
+
+>my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>pairs = list(filter(lambda x: x%2 == 0, my_list)) 
+
+Map:
+
+> map(<funcion lambda>, lista)
+
+Mapea toda la lista y las itera en la funcion lamda y retorna el valor de la expression que esta en la funcion. Tiene que ser 
+cualquier operación.
+
+Por ejemplo, queremos el cuadrado de los valores de la lista que contiene del 1 al 10:
+
+>my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>squeres = list(map(lambda x: x**2, my_list))
+
+Reduce
+
+> from functools import reduce
+> reduce(<funcion lambda>, list)
+
+Reduce la lista en un solo valor de la expresion de lambda.
+Por ejemplo, queremos el valor final de multiplicar los valores de una lista:
+
+>from functools import reduce
+>my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>result = reduce(lambda a, b: a*b, my_list)
+
+**NOTA: Para concatener diccionarios usaremos el operador pipe |
+
+
