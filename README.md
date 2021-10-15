@@ -149,6 +149,6 @@ Por ejemplo, queremos el valor final de multiplicar los valores de una lista:
 
 >result = reduce(lambda a, b: a*b, my_list)
 
-**NOTA: Para concatener diccionarios usaremos el operador pipe | **
+**NOTA: Para concatener diccionarios usaremos el operador pipe |
 
 
