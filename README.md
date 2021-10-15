@@ -119,11 +119,11 @@ expresion de lambda
 Por ejemplo, queremos obtener los numeros pares de una lista que contiene los numeros del 1 al 10:
 
 >my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
->pairs = list(filter(lambda x: x%2 == 0, my_list)) 
+pairs = list(filter(lambda x: x%2 == 0, my_list)) 
 
 Map:
 
-> map(<funcion lambda>, lista)
+> map([funcion lambda], lista)
 
 Mapea toda la lista y las itera en la funcion lamda y retorna el valor de la expression que esta en la funcion. Tiene que ser 
 cualquier operación.
