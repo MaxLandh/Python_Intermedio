@@ -3,8 +3,11 @@
 
 **El Zen de Python**
 Para poder visualizar el Zen de Python debemos introducir el siguiente comando
+
+´´´
 > import  this
 
+´´´
 
 **ENTORNOS VIRTUALES**
 
