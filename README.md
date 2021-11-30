@@ -154,4 +154,61 @@ Por ejemplo, queremos el valor final de multiplicar los valores de una lista:
 
 **NOTA: Para concatener diccionarios usaremos el operador pipe |
 
+### Manejador de errores
+
+En Python existen dos tipos de errores: SyntaxisError y Exception.
+**Syntaxis Error** son los errores en los que hay un error de sintaxis al momento de escribir codigo
+Por ejemplo, en lugar de escribir for escribimos far, se le conoce como un error typo. Estos errores hacen que
+python no corra el codigo. Lee linea por linea y si detecta este tipo de errores cancelara su ejecución.
+
+**Exception** son los errores en los que a lo largo del codigo resulto un error en una linea especifica. Y todas las
+lineas arriba si lograron ejecutarse
+
+**Elevar una excepcion**: cuando tenemos una excepción en python lo que sucede es que se crea un objeto de tipo
+exception que se va moviendo a traves de los bloques de código hasta llegar al bloque principal si es que no se maneja
+dicha excepción en algun bloque intermedio el programa se interrumpe y genera el traceback
+
+####Debugging
+
+En VS code podemos correr linea por linea nuestro codigo para ver en que punto hay un error.
+En la barra lateral izquierda damos click en ***degugging*** y le damos click en run and debugging. Donde correra 
+el archivo que estamos tratando de ejecutar paso a paso. Nos aparecera un menu superior donde podremos detener, ir al isguiente paso, entrar en una funcion y salir. Tambien del lado izquierdo empezaran a salir las variables que se van creando en el programa.
+
+### try.. except
+try:
+	..codigo..
+except <nombre_error>:
+	..codigo..
+	
+**try**: En el bloque de codigo de try pondremos el código que se va ejecutar
+**except** : En caso de que ocurra un error en el bloque ***try*** se pasara a este bloque de codigo, pero con tendra unparametro, el parametro es el nombre de la excepción.
+
+### raise
+
+try:
+	if <condicion>:
+		raise <nombre_error>'mensaje'
+
+except <nombre_error> :
+	..codigo..
+
+**raise** raise es un metodo por el cual si no se cumple una condición que damos elevara el error que le dimos a un bloque superior, en estecaso al que esta dentro de ***try*** (raise esta en el bloque if) donde evaluara el error y lo mandara a except.
+
+### finally
+
+try:
+
+except:
+
+finally:
+
+**finally** se ejecuta SIEMPRE, haya sido lanzada la excepcion o no haya sido lanzada. Es utiizado normalmente para cerrar archivos, cerrar una conexión a unabase de datos, por ejemplo.
+
+### Assert statements
+
+Los assert statements es un manejador de errores que se compone como sigue
+
+> assert <condition><mensaje>
+
+En palabras seria: Afirmo que la siguiente condición es verdadera, si no, cortar el programa  y mandar el mensaje.
 
