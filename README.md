@@ -186,11 +186,11 @@ except **nombre_error**:
 ### raise
 
 try:
-	if **condicion**:
-		raise **nombre_error**'mensaje'
+    if **condicion**:
+        raise **nombre_error**'mensaje'
 
 except **nombre_error** :
-	..codigo..
+    ..codigo..
 
 **raise** raise es un metodo por el cual si no se cumple una condición que damos elevara el error que le dimos a un bloque superior, en estecaso al que esta dentro de ***try*** (raise esta en el bloque if) donde evaluara el error y lo mandara a except.
 
@@ -212,3 +212,16 @@ Los assert statements es un manejador de errores que se compone como sigue
 
 En palabras seria: Afirmo que la siguiente condición es verdadera, si no, cortar el programa  y mandar el mensaje.
 
+### else
+
+El bloque de sentencias **try.. except** tiene una clausula extra llamada *else*. **Else** nos permite continuar con la ejecución de nuestro codigo si en el bloque try no ocurrio ningun error
+
+try:
+
+except:
+
+else:
+
+finally:
+
+Es muy util para englobar mas sentencias try y tener mas limpio el código.
