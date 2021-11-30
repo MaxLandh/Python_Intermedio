@@ -225,3 +225,6 @@ else:
 finally:
 
 Es muy util para englobar mas sentencias try y tener mas limpio el código.
+
+### Manejo de archivos externos
+
