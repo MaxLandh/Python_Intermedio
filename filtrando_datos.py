@@ -17,7 +17,7 @@ DATA = [
         'language': 'javascript',
     },
     {
-        'name': 'HÃ©ctor',
+        'name': 'Héctor',
         'age': 19,
         'organization': 'Platzi',
         'position': 'Associate',
@@ -76,18 +76,37 @@ DATA = [
 
 def run():
     #Qeremos todos los desarrolladores que manejen Python
-    all_python_devs = [worker["name"] for worker in DATA if worker["language"]=="python"]
-    
-    #Queremos a todos los trabajadores de platzi
-    all_platzi_workers = [worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
+    #all_python_devs = [worker["name"] for worker in DATA if worker["language"]=="python"]
+    #Realizaremos la misma linea de arriba con high function
+    devs = list(filter(lambda worker: worker['language']=='python', DATA))
+    all_python_devs = list(map(lambda worker: worker['name'], devs))
+    for dev  in all_python_devs:
+        print(dev)
 
+    
+    print('''
+            PROCESSING''')
+
+    #Queremos a todos los trabajadores de platzi
+    #all_platzi_workers = [worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
+    #Realizaremos la misma linea de arriba con high function
+    workers = list(filter(lambda worker: worker['organization']=='Platzi', DATA))
+    all_platzi_workers = list(map(lambda worker: worker['name'], workers))
+    for work in all_platzi_workers:
+        print(work)
+    
+    print('''
+            PROCESSING''')
     #Queremos a todos los adultos, osea mayores de 18 
     all_olders = [worker["name"] for worker in DATA if worker["age"] > 18]
-    
     #Usando las funciones de orden superior
     adults = list(filter(lambda worker: worker["age"] > 18, DATA))
     adults = list(map(lambda worker: worker["name"], adults))
-    old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
+    
+
+    #old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
+    #Realizaremos la linea de arriba con list comprehensions
+    old_people = [worker['name'] for worker in DATA if worker['age']>70]
     for old in old_people:
         print(old)   
 
