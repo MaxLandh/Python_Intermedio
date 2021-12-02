@@ -228,3 +228,29 @@ Es muy util para englobar mas sentencias try y tener mas limpio el código.
 
 ### Manejo de archivos externos
 
+Para poder abrir archivos de texto plano en Python existen tres modos de apertura
+
+**r** Lectura
+**w** Escritura (sobree escribir)
+**a** Escritura (agregar al final)
+
+Es sencillo realizar este proceso en Python con la siguiente linea de código:
+
+> **with** ***open***('..ruta_archivo..' , '..modo(r,w,a)..') as ..alias..:
+
+Donde el metodo **with** es un manejador contextual, el cual controla el flujo de nuestro archivo que estemos manipulanod. ***open*** es la función que nos permitira abrir el archivo. 
+Le pasamos dos parametros (puede tener mas parametros ) la ruta del archivo y el modo en que lo queremos abrir. Otros modos son los siguientes:
+
+**x** Crea un archivo, lanza un error si ya existe.
+**b** Modo binario
+**t** Modo de texto
+
+La función **open** tiene el metodo ***write()*** en el cual podemos escribir una linea en nuestro archivo.
+
+### NOTAS
+
+> os.systems('clear') : limpia la consola en python
+
+> Modulos string:  el atributo  string.ascii_lowercase es un modulo que contiene el alfabeto en minusculas
+
+
